@@ -17,7 +17,6 @@ namespace PayrollSystem.Models
         /// <summary>
         /// Overrides base method to calculate salary for contract employees.
         /// </summary>
-        /// <returns></returns>
         public override PaySlip CalculatePay()
         {
             decimal deduction = BaseSalary * 0.05m;
