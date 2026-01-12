@@ -2,7 +2,7 @@ namespace OnlineOrderProcessing.Models
 {    
      /// <summary>
      /// Customer class represents a buyer in the system.
-     /// It demonstrates ENCAPSULATION by exposing only read-only properties.
+     /// It demonstrates encapsulation by exposing only read-only properties.
      /// </summary>
     public class Customer
     {

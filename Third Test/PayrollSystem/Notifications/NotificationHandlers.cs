@@ -5,7 +5,7 @@ namespace PayrollSystem.Notifications
 {
     /// <summary>
     /// Contains notification logic.
-    /// Demonstrates DELEGATES and MULTICAST DELEGATES.
+    /// Demonstrates dellegates and multicast delegates.
     /// </summary>
     public static class NotificationHandlers
     {

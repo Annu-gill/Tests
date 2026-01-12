@@ -3,25 +3,23 @@ using System.Collections.Generic;
 using PayrollSystem.Models;
 using PayrollSystem.Services;
 using PayrollSystem.Notifications;
+using PayrollSystem.Data;
 
 namespace PayrollSystem
 {
     /// <summary>
-    /// Program class is the ENTRY POINT.
-    /// Handles user input and coordinates services.
+    /// Entry point of the application.
+    /// Takes user input and stores employees using EmployeeData class.
     /// </summary>
-    class Program
+    public class Program
     {
-        static void Main()
+        public static void Main()
         {
-            // Dictionary used for fast lookup by Employee ID
-            Dictionary<int, Employee> employeeMap = new Dictionary<int, Employee>();
-
             Console.WriteLine("===== PAYROLL SYSTEM =====");
             Console.WriteLine("Enter details for 6 employees\n");
 
-            // User input loop
-            while (employeeMap.Count < 6)
+            // USER INPUT
+            while (EmployeeData.Count() < 6)
             {
                 try
                 {
@@ -37,13 +35,14 @@ namespace PayrollSystem
                     Console.Write("Salary: ");
                     decimal salary = decimal.Parse(Console.ReadLine());
 
-                    // Polymorphic object creation
                     Employee emp = type == 1
                         ? new FullTimeEmployee(id, name, salary)
                         : new ContractEmployee(id, name, salary);
 
-                    employeeMap.Add(id, emp);
-                    Console.WriteLine("Employee added successfully ✔\n");
+                    // Store in static collection
+                    EmployeeData.AddEmployee(emp);
+
+                    Console.WriteLine("Employee added successfully. \n");
                 }
                 catch (Exception ex)
                 {
@@ -52,16 +51,16 @@ namespace PayrollSystem
                 }
             }
 
-            // Convert Dictionary to List
-            List<Employee> employees = new List<Employee>(employeeMap.Values);
+            // Fetch employees from EmployeeData
+            List<Employee> employees = EmployeeData.GetEmployees();
 
             PayrollProcessor processor = new PayrollProcessor();
 
-            // Multicast delegate subscriptions
+            // Delegate subscriptions (multicast)
             processor.SalaryProcessed += NotificationHandlers.NotifyHR;
             processor.SalaryProcessed += NotificationHandlers.NotifyFinance;
 
-            // Process payroll
+            // Payroll Processing
             List<PaySlip> slips = processor.ProcessPayroll(employees);
 
             Console.WriteLine("\n===== PAYSLIP DETAILS =====");
@@ -73,7 +72,7 @@ namespace PayrollSystem
                 );
             }
 
-            // Print summary
+            // Summary Report
             ReportService report = new ReportService();
             report.PrintSummary(slips);
 

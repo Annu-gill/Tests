@@ -2,7 +2,7 @@ namespace OnlineOrderProcessing.Models
 {
     /// <summary>
     /// OrderItem represents a product with quantity inside an order.
-    /// Demonstrates COMPOSITION (Order has OrderItems).
+    /// Demonstrates composition (Order has OrderItems).
     /// </summary>
     public class OrderItem
     {

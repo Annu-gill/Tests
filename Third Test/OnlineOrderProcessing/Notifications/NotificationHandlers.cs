@@ -5,7 +5,7 @@ namespace OnlineOrderProcessing.Notifications
 {
     /// <summary>
     /// Contains notification logic.
-    /// Uses DELEGATES to notify multiple subscribers.
+    /// Uses delegates to notify multiple subscribers.
     /// </summary>
     public static class NotificationHandlers
     {

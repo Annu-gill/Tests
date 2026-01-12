@@ -3,7 +3,7 @@ using System;
 namespace PayrollSystem.Models
 {
     /// <summary>
-    /// Employee is an ABSTRACT base class.
+    /// Employee is an abstract base class.
     /// It represents common data and behavior for all employee types.
     /// Demonstrates Encapsulation, Inheritance, Runtime Polymorphism
     /// </summary>
@@ -33,8 +33,10 @@ namespace PayrollSystem.Models
         }
         /// <summary>
         /// Polymorphic method:
-        /// Each derived class MUST implement its own salary calculation.
+        /// Each derived class must implement its own salary calculation.
         /// </summary>
         public abstract PaySlip CalculatePay();
     }
 }
+
+

@@ -5,9 +5,9 @@ using System.Linq;
 namespace OnlineOrderProcessing.Models
 {
     /// <summary>
-    /// Order is the CORE BUSINESS ENTITY.
+    /// Order is the core business entity.
     /// It manages items, total calculation, and status transitions.
-    /// Demonstrates ENCAPSULATION, COMPOSITION, and BUSINESS RULE VALIDATION.
+    /// Demonstrates encapsulation, composition, and business rule validation.
     /// </summary>
 
     public class Order

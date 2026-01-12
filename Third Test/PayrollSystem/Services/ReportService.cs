@@ -6,7 +6,7 @@ using PayrollSystem.Models;
 namespace PayrollSystem.Services
 {
     /// <summary>
-    /// Responsible ONLY for reporting.
+    /// Responsible only for reporting.
     /// Follows Single Responsibility Principle.
     /// </summary>
     public class ReportService

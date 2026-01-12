@@ -4,7 +4,7 @@ using OnlineOrderProcessing.Models;
 namespace OnlineOrderProcessing.Services
 {
     /// <summary>
-    /// Responsible only for REPORTING.
+    /// Responsible only for reporting.
     /// Keeps reporting separate from business logic.
     /// </summary>
     public class ReportService

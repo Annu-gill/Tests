@@ -1,7 +1,7 @@
 namespace PayrollSystem.Models
 {
     /// <summary>
-    /// PaySlip is a DATA TRANSFER OBJECT.
+    /// PaySlip is a data transfer object.
     /// Stores the final payroll result for an employee.
     /// </summary>
     public class PaySlip
@@ -13,8 +13,7 @@ namespace PayrollSystem.Models
         public decimal Deductions { get; }
         public decimal Net { get; }
 
-        public PaySlip(int id, string name, string type,
-                       decimal gross, decimal deductions, decimal net)
+        public PaySlip(int id, string name, string type, decimal gross, decimal deductions, decimal net)
         {
             EmployeeId = id;
             Name = name;

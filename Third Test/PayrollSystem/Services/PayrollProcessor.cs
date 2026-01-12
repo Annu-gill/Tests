@@ -19,7 +19,7 @@ namespace PayrollSystem.Services
         // Multicast delegate reference
         public SalaryProcessedHandler SalaryProcessed;
         /// <summary>
-        /// Processes payroll using FOREACH loop (assignment requirement).
+        /// Processes payroll using foreach loop.
         /// Uses polymorphism to calculate salary.
         /// </summary>
         /// <param name="employees"></param>

@@ -8,7 +8,7 @@ namespace OnlineOrderProcessing
 {
     /// <summary>
     /// Entry point of the application.
-    /// Handles USER INPUT and coordinates all services.
+    /// Handles user input and coordinates all services.
     /// </summary>
     class Program
     {
@@ -87,7 +87,7 @@ namespace OnlineOrderProcessing
             service.StatusChanged += NotificationHandlers.NotifyCustomer;
             service.StatusChanged += NotificationHandlers.NotifyLogistics;
 
-            // Process order statuses
+            // Process order stat uses
             foreach (Order order in orders)
             {
                 try

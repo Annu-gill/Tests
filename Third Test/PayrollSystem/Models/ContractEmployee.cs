@@ -8,8 +8,7 @@ namespace PayrollSystem.Models
     /// </summary>
     public class ContractEmployee : Employee
     {
-        public ContractEmployee(int id, string name, decimal salary)
-            : base(id, name, salary)
+        public ContractEmployee(int id, string name, decimal salary) : base(id, name, salary)
         {
             EmployeeType = "Contract";
         }
