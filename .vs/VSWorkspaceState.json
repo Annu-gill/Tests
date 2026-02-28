@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "\\FlightSearchEngine",
+    "\\FlightSearchEngine\\Controllers",
+    "\\FlightSearchEngine\\Data",
+    "\\FlightSearchEngine\\Models",
+    "\\FlightSearchEngine\\Properties",
+    "\\FlightSearchEngine\\Views",
+    "\\FlightSearchEngine\\Views\\Flight"
+  ],
+  "PreviewInSolutionExplorer": false
+}
