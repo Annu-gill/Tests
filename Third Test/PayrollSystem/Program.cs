@@ -14,7 +14,7 @@ namespace PayrollSystem
     public class Program
     {
         public static void Main()
-        {
+        { 
             Console.WriteLine("===== PAYROLL SYSTEM =====");
             Console.WriteLine("Enter details for 6 employees\n");
 
